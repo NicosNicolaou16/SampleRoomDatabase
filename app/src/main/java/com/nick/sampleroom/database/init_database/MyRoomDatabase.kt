@@ -5,16 +5,22 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.nick.sampleroom.database.BookDao
 import com.nick.sampleroom.database.BookModel
+import com.nick.sampleroom.database.BookTypeDao
+import com.nick.sampleroom.database.BookTypeModel
+import com.nick.sampleroom.database.type_converter.TypeConverter
 
 @Database(
-        entities = [BookModel::class],
+        entities = [BookModel::class, BookTypeModel::class],
         version = 1,
         exportSchema = false
 )
-@TypeConverters(
-)
+@TypeConverters(TypeConverter::class)
 abstract class MyRoomDatabase : RoomDatabase() {
+
+    abstract fun bookDao(): BookDao
+    abstract fun bookTypeDao(): BookTypeDao
 
     companion object {
         @Volatile

@@ -10,7 +10,7 @@ import com.nick.sampleroom.utils.base_class.BaseActivity
 
 class LauncherActivity : BaseActivity() {
 
-    private var launcherViewModel = LauncherViewModel(SampleRoomApplication)
+    private var launcherViewModel = LauncherViewModel(SampleRoomApplication.getInstance())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

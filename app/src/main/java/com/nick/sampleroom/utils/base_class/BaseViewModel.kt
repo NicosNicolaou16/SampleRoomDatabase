@@ -13,7 +13,7 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
 
     private val job = Job()
     internal val loading = MutableLiveData<Boolean>()
-    internal val error = MutableLiveData<Boolean>()
+    internal val error = MutableLiveData<String>()
 
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
