@@ -2,7 +2,7 @@ This project is a sample room database with dummy data, and show them on recycle
 
 # The Project contain
 Room database <br />
-data Binding <br />
+Data Binding <br />
 Coroutines <br />
 Kotlin ktx <br />
 Navigation <br />
