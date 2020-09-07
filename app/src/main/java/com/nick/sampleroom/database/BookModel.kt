@@ -5,7 +5,6 @@ import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.database.type_converter.TypeConverter
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 

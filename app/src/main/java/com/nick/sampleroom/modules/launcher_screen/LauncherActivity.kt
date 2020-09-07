@@ -21,7 +21,10 @@ class LauncherActivity : BaseActivity() {
 
     private fun initObservable() {
         launcherViewModel.startMainActivity.observe(this, Observer {
-            if (it) startActivity(Intent(this, MainActivity::class.java))
+            if (it) {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }
         })
     }
 
