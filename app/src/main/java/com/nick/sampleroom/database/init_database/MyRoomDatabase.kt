@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.nick.sampleroom.database.*
+import com.nick.sampleroom.database.models.*
 import com.nick.sampleroom.database.type_converter.TypeConverter
 
 @Database(

@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.modules.books.adapter.BookAdapter
+import com.nick.sampleroom.modules.books.model.BookDataModel
 import com.nick.sampleroom.utils.base_class.BaseFragment
 import kotlinx.android.synthetic.main.fragment_books.*
 
@@ -65,7 +67,9 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
         })
     }
 
-    override fun onClickBookListener(id: Long) {
-        //TODO start fragment
+    override fun onClickBookListener(bookDataModel: BookDataModel) {
+       val action = BooksFragmentDirections.actionBooksFragmentToBookDetailsFragment()
+        action.bookData = bookDataModel
+        view?.let { Navigation.findNavController(it).navigate(action) }
     }
 }

@@ -1,13 +1,16 @@
-package com.nick.sampleroom.database
+package com.nick.sampleroom.database.models
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.database.type_converter.TypeConverter
+import kotlinx.android.parcel.Parcelize
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 
+@Parcelize
 @Entity
 data class BookModel(
         @PrimaryKey
@@ -17,7 +20,7 @@ data class BookModel(
         @TypeConverters(TypeConverter::class)
         var bookTypeModel: BookTypeModel?,
         var bookTypeId: Long?
-) {
+): Parcelable {
 
     constructor() : this(-1L, "", -1L, BookTypeModel(), -1L)
 

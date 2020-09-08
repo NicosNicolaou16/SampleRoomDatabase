@@ -17,7 +17,7 @@ fun getProgressDrawable(context: Context): CircularProgressDrawable {
     }
 }
 
-fun ImageView.loadImageBind(drawable: Drawable?, progressDrawable: CircularProgressDrawable) {
+fun ImageView.loadImageBind(drawable: Int?, progressDrawable: CircularProgressDrawable) {
     val options = RequestOptions()
             .placeholder(progressDrawable)
             .error(R.mipmap.ic_launcher_round)
@@ -28,6 +28,6 @@ fun ImageView.loadImageBind(drawable: Drawable?, progressDrawable: CircularProgr
 }
 
 @BindingAdapter("android:imageDrawable")
-fun loadImageBinding(imageView: ImageView, drawable: Drawable) {
+fun loadImageBinding(imageView: ImageView, drawable: Int) {
     imageView.loadImageBind(drawable, getProgressDrawable(imageView.context))
 }

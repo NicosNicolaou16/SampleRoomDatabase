@@ -12,7 +12,7 @@ import com.nick.sampleroom.modules.books.model.BookDataModel
 class BookAdapter(private var bookDataModelList: MutableList<BookDataModel>, private var bookListener: BookListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     interface BookListener {
-        fun onClickBookListener(id: Long)
+        fun onClickBookListener(bookDataModel: BookDataModel)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -53,8 +53,8 @@ class BookAdapter(private var bookDataModelList: MutableList<BookDataModel>, pri
             listener = this@BookInfoViewHolder
         }
 
-        override fun onClickBookListener(id: Long) {
-            bookListener.onClickBookListener(id)
+        override fun onClickBookListener(bookDataModel: BookDataModel) {
+            bookListener.onClickBookListener(bookDataModel)
         }
     }
 }

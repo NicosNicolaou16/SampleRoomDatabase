@@ -1,4 +1,4 @@
-package com.nick.sampleroom.database
+package com.nick.sampleroom.database.models
 
 import androidx.room.Dao
 import androidx.room.Query

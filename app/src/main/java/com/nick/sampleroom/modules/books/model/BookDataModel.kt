@@ -1,17 +1,18 @@
 package com.nick.sampleroom.modules.books.model
 
-import android.graphics.drawable.Drawable
-import androidx.core.content.ContextCompat
+import android.os.Parcelable
 import com.nick.sampleroom.R
-import com.nick.sampleroom.application.SampleRoomApplication
-import com.nick.sampleroom.database.BookModel
-import com.nick.sampleroom.modules.books.model.BookDataModel.BookViewType.*
+import com.nick.sampleroom.database.models.BookModel
+import com.nick.sampleroom.modules.books.model.BookDataModel.BookViewType.BOOK_INFO
+import com.nick.sampleroom.modules.books.model.BookDataModel.BookViewType.BOOK_TYPE
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class BookDataModel(
         var bookModel: BookModel?,
-        var drawable: Drawable?,
+        var drawable: Int?,
         var bookViewType: BookViewType
-) {
+) : Parcelable {
 
     enum class BookViewType {
         BOOK_TYPE,
@@ -24,7 +25,7 @@ data class BookDataModel(
             val bookDataModelList = mutableListOf<BookDataModel>()
             bookModelList.forEach {
                 bookDataModelList.add(BookDataModel(it, null, BOOK_TYPE))
-                bookDataModelList.add(BookDataModel(it, ContextCompat.getDrawable(SampleRoomApplication.getInstance(), R.drawable.ic_baseline_library_books), BOOK_INFO))
+                bookDataModelList.add(BookDataModel(it, R.drawable.ic_baseline_library_books, BOOK_INFO))
             }
             return bookDataModelList
         }

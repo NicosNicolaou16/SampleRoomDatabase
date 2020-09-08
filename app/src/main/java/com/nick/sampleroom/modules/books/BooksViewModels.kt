@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
 import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
-import com.nick.sampleroom.database.BookModel
-import com.nick.sampleroom.database.BookTypeModel
+import com.nick.sampleroom.database.models.BookModel
+import com.nick.sampleroom.database.models.BookTypeModel
 import com.nick.sampleroom.modules.books.model.BookDataModel
 import com.nick.sampleroom.utils.base_class.BaseViewModel
 import kotlinx.coroutines.Dispatchers

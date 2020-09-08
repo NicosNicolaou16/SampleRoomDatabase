@@ -1,4 +1,4 @@
-package com.nick.sampleroom.database
+package com.nick.sampleroom.database.models
 
 import androidx.room.Embedded
 import androidx.room.Relation
