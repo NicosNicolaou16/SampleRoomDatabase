@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import com.nick.sampleroom.R
 import com.nick.sampleroom.databinding.FragmentBookDetailsBinding
@@ -27,10 +26,10 @@ class BookDetailsFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initViewAndData()
+        init()
     }
 
-    private fun initViewAndData() {
+    private fun init() {
         getIntentData()
         setData()
     }

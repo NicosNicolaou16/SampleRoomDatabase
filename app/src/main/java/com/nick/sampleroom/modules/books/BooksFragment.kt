@@ -29,10 +29,10 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initViewAndData()
+        init()
     }
 
-    private fun initViewAndData() {
+    private fun init() {
         initAdapter()
         //createDummyData()
         initObservable()
