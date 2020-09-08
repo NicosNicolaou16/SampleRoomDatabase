@@ -8,15 +8,26 @@ import androidx.annotation.UiThread
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.nick.sampleroom.R
+import com.nick.sampleroom.database.init_database.MyRoomDatabase
 
 abstract class BaseFragment : Fragment() {
+
+    private var loadingProgressBar: AlertDialog.Builder? = null
+    private var loadingShown: AlertDialog? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    private var loadingProgressBar: AlertDialog.Builder? = null
-    private var loadingShown: AlertDialog? = null
+    override fun onDestroy() {
+        MyRoomDatabase.destroyInstance()
+        super.onDestroy()
+    }
+
+    override fun onPause() {
+        stopLoading()
+        super.onPause()
+    }
 
     /**
      * this method uses to show the default progress bar (loading)
