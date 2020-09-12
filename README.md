@@ -8,3 +8,8 @@ Kotlin ktx <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
+
+target SDK version: 30 <br />
+minimum SDK version: 23 <br />
+Kotlin version: 1.4.10 <br />
+gradle version: 4.0.1 <br />

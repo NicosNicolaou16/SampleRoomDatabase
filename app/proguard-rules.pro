@@ -21,3 +21,7 @@
 #-renamesourcefileattribute SourceFile
 
 -keep class com.nick.sampleroom.modules.books.model.BookDataModel { *; }
+
+#
+-dontwarn java.lang.instrument.ClassFileTransformer
+-dontwarn sun.misc.SignalHandler
