@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'androidx.navigation.safeargs'//binding
+apply plugin: 'androidx.navigation.safeargs'//data binding
 
 androidExtensions {
     experimental = true
@@ -88,7 +88,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
     //for kapt incremental
-    annotationProcessor "androidx.room:room-compiler:$roomVersion"
+    //annotationProcessor "androidx.room:room-compiler:$roomVersion"
     //navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"

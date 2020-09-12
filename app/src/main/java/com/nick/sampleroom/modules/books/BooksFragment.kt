@@ -12,7 +12,7 @@ import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.modules.books.adapter.BookAdapter
 import com.nick.sampleroom.modules.books.model.BookDataModel
-import com.nick.sampleroom.utils.base_class.BaseFragment
+import com.nick.sampleroom.utils.base_classes.BaseFragment
 import kotlinx.android.synthetic.main.fragment_books.*
 
 /**

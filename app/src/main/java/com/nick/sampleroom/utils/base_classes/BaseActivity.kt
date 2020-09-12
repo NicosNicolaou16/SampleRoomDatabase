@@ -1,4 +1,4 @@
-package com.nick.sampleroom.utils.base_class
+package com.nick.sampleroom.utils.base_classes
 
 import android.os.Bundle
 import android.view.LayoutInflater

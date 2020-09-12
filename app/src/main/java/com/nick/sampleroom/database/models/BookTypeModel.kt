@@ -19,7 +19,7 @@ data class BookTypeModel(
 
     companion object {
 
-        suspend fun insertTheBookTypeData(bookTypeModel: BookTypeModel?) = with(SampleRoomApplication.getInstance()) {
+        suspend fun insertAndSaveBookTypeData(bookTypeModel: BookTypeModel?) = with(SampleRoomApplication.getInstance()) {
             flow {
                 bookTypeModel?.let { getDatabase().bookTypeDao().insertOrReplaceObject(it) }
                 emit(bookTypeModel)

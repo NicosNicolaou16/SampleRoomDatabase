@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.nick.sampleroom.R
 import com.nick.sampleroom.databinding.FragmentBookDetailsBinding
 import com.nick.sampleroom.modules.books.model.BookDataModel
-import com.nick.sampleroom.utils.base_class.BaseFragment
+import com.nick.sampleroom.utils.base_classes.BaseFragment
 
 /**
  * A simple [Fragment] subclass.

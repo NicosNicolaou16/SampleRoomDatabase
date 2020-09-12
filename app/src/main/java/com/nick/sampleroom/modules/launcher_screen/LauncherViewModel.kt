@@ -2,7 +2,7 @@ package com.nick.sampleroom.modules.launcher_screen
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import com.nick.sampleroom.utils.base_class.BaseViewModel
+import com.nick.sampleroom.utils.base_classes.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

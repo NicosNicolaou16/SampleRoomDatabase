@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer
 import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.modules.main_activity.MainActivity
-import com.nick.sampleroom.utils.base_class.BaseActivity
+import com.nick.sampleroom.utils.base_classes.BaseActivity
 
 class LauncherActivity : BaseActivity() {
 

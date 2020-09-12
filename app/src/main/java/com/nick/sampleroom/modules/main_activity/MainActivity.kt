@@ -5,7 +5,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.nick.sampleroom.R
-import com.nick.sampleroom.utils.base_class.BaseActivity
+import com.nick.sampleroom.utils.base_classes.BaseActivity
 
 class MainActivity : BaseActivity() {
 

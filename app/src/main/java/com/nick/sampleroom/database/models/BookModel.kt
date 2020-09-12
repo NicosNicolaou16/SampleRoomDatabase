@@ -26,19 +26,19 @@ data class BookModel(
 
     companion object {
 
-        suspend fun insertBooks(bookModelList: MutableList<BookModel>) = with(SampleRoomApplication.getInstance()) {
+        suspend fun insertAndSaveBooks(bookModelList: MutableList<BookModel>) = with(SampleRoomApplication.getInstance()) {
             flow {
                 //deleteTables()
                 bookModelList.forEach {
-                    insertBookType(it)
+                    insertAndSaveBookType(it)
                 }
                 getDatabase().bookDao().insertOrReplaceList(bookModelList)
                 emit(getDatabase().bookDao().getAllBooks())
             }
         }
 
-        private suspend fun insertBookType(bookModel: BookModel) {
-            BookTypeModel.insertTheBookTypeData(bookModel.bookTypeModel).collect {
+        private suspend fun insertAndSaveBookType(bookModel: BookModel) {
+            BookTypeModel.insertAndSaveBookTypeData(bookModel.bookTypeModel).collect {
                 bookModel.bookTypeId = it?.id
             }
         }
