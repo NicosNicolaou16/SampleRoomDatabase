@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.flow
 
 @Parcelize
 @Entity
-data class BookTypeModel(
+data class BookGenreModel(
         @PrimaryKey
         var id: Long?,
         var type: String?
@@ -19,10 +19,10 @@ data class BookTypeModel(
 
     companion object {
 
-        suspend fun insertAndSaveBookTypeData(bookTypeModel: BookTypeModel?) = with(SampleRoomApplication.getInstance()) {
+        suspend fun insertAndSaveBookGenreData(bookGenreModel: BookGenreModel?) = with(SampleRoomApplication.getInstance()) {
             flow {
-                bookTypeModel?.let { getDatabase().bookTypeDao().insertOrReplaceObject(it) }
-                emit(bookTypeModel)
+                bookGenreModel?.let { getDatabase().bookGenreDao().insertOrReplaceObject(it) }
+                emit(bookGenreModel)
             }
 
         }

@@ -3,9 +3,9 @@ package com.nick.sampleroom.database.models
 import androidx.room.Embedded
 import androidx.room.Relation
 
-data class BookAndBookTypeModel(
+data class BookAndBookGenreModel(
         @Embedded
-        var bookTypeModel: BookTypeModel,
+        var bookGenreModel: BookGenreModel,
         @Relation(
                 parentColumn = "id",
                 entityColumn = "bookTypeId"

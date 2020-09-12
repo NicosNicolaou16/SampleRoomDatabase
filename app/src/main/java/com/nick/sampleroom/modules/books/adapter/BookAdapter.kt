@@ -42,7 +42,7 @@ class BookAdapter(private var bookDataModelList: MutableList<BookDataModel>, pri
     private inner class BookTypeViewHolder(var view: BookTypeLayoutRecyclerViewBinding) : RecyclerView.ViewHolder(view.root) {
 
         fun bindData(bookDataModel: BookDataModel?) = with(view) {
-            bookType = bookDataModel
+            bookGenre = bookDataModel
         }
     }
 

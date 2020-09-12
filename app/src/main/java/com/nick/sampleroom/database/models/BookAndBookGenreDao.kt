@@ -3,5 +3,5 @@ package com.nick.sampleroom.database.models
 import androidx.room.Dao
 
 @Dao
-interface BookAndBookTypeDao {
+interface BookAndBookGenreDao {
 }

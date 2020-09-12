@@ -5,7 +5,7 @@
     <data>
 
         <variable
-            name="bookType"
+            name="bookGenre"
             type="com.nick.sampleroom.modules.books.model.BookDataModel" />
     </data>
 
@@ -14,12 +14,12 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/bookTypeTV"
+            android:id="@+id/bookGenreTextView"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
             android:gravity="center|start"
-            android:text="@{bookType.bookModel.bookTypeModel.type}"
+            android:text="@{bookGenre.bookModel.bookGenreModel.type}"
             android:textColor="@android:color/black"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"

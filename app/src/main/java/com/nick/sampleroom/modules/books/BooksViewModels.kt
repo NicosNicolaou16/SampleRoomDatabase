@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
 import com.nick.sampleroom.database.models.BookModel
-import com.nick.sampleroom.database.models.BookTypeModel
+import com.nick.sampleroom.database.models.BookGenreModel
 import com.nick.sampleroom.modules.books.model.BookDataModel
 import com.nick.sampleroom.utils.base_classes.BaseViewModel
 import kotlinx.coroutines.Dispatchers
@@ -23,7 +23,7 @@ class BooksViewModels(application: Application) : BaseViewModel(application) {
 
     companion object {
         private const val DELAY_LOADING = 1500L
-        private val listOfBookType = mutableListOf(
+        private val listOfBookGenre = mutableListOf(
             "Adventure",
             "Romance",
             "Mystery",
@@ -82,7 +82,7 @@ class BooksViewModels(application: Application) : BaseViewModel(application) {
         val bookModelList = mutableListOf<BookModel>()
         for (i in 0 until 11) {
             val pages = getRandomBookPages(500, 999)
-            val bookTypeModel = BookTypeModel(i.toLong(), listOfBookType[i])
+            val bookTypeModel = BookGenreModel(i.toLong(), listOfBookGenre[i])
             bookModelList.add(BookModel(i.toLong(), "Book $i", pages, bookTypeModel, i.toLong()))
         }
         return bookModelList

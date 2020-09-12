@@ -9,7 +9,7 @@ import com.nick.sampleroom.database.models.*
 import com.nick.sampleroom.database.type_converter.TypeConverter
 
 @Database(
-        entities = [BookModel::class, BookTypeModel::class],
+        entities = [BookModel::class, BookGenreModel::class],
         version = 1,
         exportSchema = false
 )
@@ -17,8 +17,8 @@ import com.nick.sampleroom.database.type_converter.TypeConverter
 abstract class MyRoomDatabase : RoomDatabase() {
 
     abstract fun bookDao(): BookDao
-    abstract fun bookTypeDao(): BookTypeDao
-    abstract fun bookAndBookTypeDao(): BookAndBookTypeDao
+    abstract fun bookGenreDao(): BookTypeDao
+    abstract fun bookAndBookGenreDao(): BookAndBookGenreDao
 
     companion object {
         @Volatile

@@ -18,11 +18,11 @@ data class BookModel(
         var name: String?,
         var pages: Long?,
         @TypeConverters(TypeConverter::class)
-        var bookTypeModel: BookTypeModel?,
+        var bookGenreModel: BookGenreModel?,
         var bookTypeId: Long?
 ): Parcelable {
 
-    constructor() : this(-1L, "", -1L, BookTypeModel(), -1L)
+    constructor() : this(-1L, "", -1L, BookGenreModel(), -1L)
 
     companion object {
 
@@ -30,22 +30,22 @@ data class BookModel(
             flow {
                 //deleteTables()
                 bookModelList.forEach {
-                    insertAndSaveBookType(it)
+                    insertAndSaveBookGenre(it)
                 }
                 getDatabase().bookDao().insertOrReplaceList(bookModelList)
                 emit(getDatabase().bookDao().getAllBooks())
             }
         }
 
-        private suspend fun insertAndSaveBookType(bookModel: BookModel) {
-            BookTypeModel.insertAndSaveBookTypeData(bookModel.bookTypeModel).collect {
+        private suspend fun insertAndSaveBookGenre(bookModel: BookModel) {
+            BookGenreModel.insertAndSaveBookGenreData(bookModel.bookGenreModel).collect {
                 bookModel.bookTypeId = it?.id
             }
         }
 
         private suspend fun deleteTables() = with(SampleRoomApplication.getInstance()) {
             getDatabase().bookDao().deleteAll()
-            getDatabase().bookTypeDao().deleteAll()
+            getDatabase().bookGenreDao().deleteAll()
         }
     }
 }
