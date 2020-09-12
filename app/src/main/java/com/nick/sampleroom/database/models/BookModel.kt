@@ -19,7 +19,7 @@ data class BookModel(
         var pages: Long?,
         @TypeConverters(TypeConverter::class)
         var bookGenreModel: BookGenreModel?,
-        var bookTypeId: Long?
+        var bookGenreId: Long?
 ): Parcelable {
 
     constructor() : this(-1L, "", -1L, BookGenreModel(), -1L)
@@ -39,7 +39,7 @@ data class BookModel(
 
         private suspend fun insertBookGenre(bookModel: BookModel) {
             BookGenreModel.insertBookGenreData(bookModel.bookGenreModel).collect {
-                bookModel.bookTypeId = it?.id
+                bookModel.bookGenreId = it?.id
             }
         }
 
