@@ -46,7 +46,7 @@ class BooksViewModels(application: Application) : BaseViewModel(application) {
             delay(DELAY_LOADING)
             withContext(Dispatchers.IO) {
                 val bookModelList = createDummyData()
-                BookModel.insertAndSaveBooks(bookModelList).collect {
+                BookModel.insertBooks(bookModelList).collect {
                     bookDataModelList = BookDataModel.createTheBookData(it)
                 }
             }
@@ -65,7 +65,7 @@ class BooksViewModels(application: Application) : BaseViewModel(application) {
                 delay(DELAY_LOADING)
                 withContext(Dispatchers.IO) {
                     val bookModelList = createDummyData()
-                    BookModel.insertAndSaveBooks(bookModelList).collect {
+                    BookModel.insertBooks(bookModelList).collect {
                         bookDataModelList = BookDataModel.createTheBookData(it)
                     }
                 }
