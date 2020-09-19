@@ -5,7 +5,7 @@ import androidx.room.Query
 import com.nick.sampleroom.database.init_database.BaseDao
 
 @Dao
-interface BookTypeDao : BaseDao<BookGenreModel, MutableList<BookGenreModel>> {
+interface BookGenreDao : BaseDao<BookGenreModel, MutableList<BookGenreModel>> {
 
     @Query("SELECT * FROM bookgenremodel")
     suspend fun getAllBookTypeList() : MutableList<BookGenreModel>

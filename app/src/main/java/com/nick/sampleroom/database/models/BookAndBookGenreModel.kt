@@ -8,7 +8,7 @@ data class BookAndBookGenreModel(
         var bookGenreModel: BookGenreModel,
         @Relation(
                 parentColumn = "id",
-                entityColumn = "bookTypeId"
+                entityColumn = "bookGenreId"
         )
         var bookModel: BookModel
 ) {

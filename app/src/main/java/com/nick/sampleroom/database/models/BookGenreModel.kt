@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.flow
 data class BookGenreModel(
         @PrimaryKey
         var id: Long?,
-        var type: String?
+        var genre: String?
 ): Parcelable {
 
     constructor() : this(-1L, "")

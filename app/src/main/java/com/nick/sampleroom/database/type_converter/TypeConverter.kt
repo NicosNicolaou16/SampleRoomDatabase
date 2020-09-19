@@ -15,8 +15,7 @@ class TypeConverter {
     }
 
     @TypeConverter
-    fun fromArrayLisr(list: BookGenreModel?): String {
-        val gson = Gson()
-        return gson.toJson(list)
+    fun fromObject(list: BookGenreModel?): String {
+        return Gson().toJson(list)
     }
 }

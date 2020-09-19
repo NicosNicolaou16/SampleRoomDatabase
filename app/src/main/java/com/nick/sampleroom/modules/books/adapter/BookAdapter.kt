@@ -17,7 +17,7 @@ class BookAdapter(private var bookDataModelList: MutableList<BookDataModel>, pri
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
-            BookDataModel.BookViewType.BOOK_INFO.ordinal -> BookInfoViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.book_info_layout_recycler_view, parent, false))
+            BookDataModel.BookViewGenre.BOOK_INFO.ordinal -> BookInfoViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.book_info_layout_recycler_view, parent, false))
             else -> BookTypeViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.book_genre_layout_recycler_view, parent, false))
         }
     }
@@ -35,7 +35,7 @@ class BookAdapter(private var bookDataModelList: MutableList<BookDataModel>, pri
         }
     }
 
-    override fun getItemViewType(position: Int) = this.bookDataModelList[position].bookViewType.ordinal
+    override fun getItemViewType(position: Int) = this.bookDataModelList[position].bookViewGenre.ordinal
 
     override fun getItemCount() = this.bookDataModelList.size
 

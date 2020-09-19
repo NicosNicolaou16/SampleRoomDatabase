@@ -19,7 +19,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
             android:gravity="center|start"
-            android:text="@{bookGenre.bookModel.bookGenreModel.type}"
+            android:text="@{bookGenre.bookModel.bookGenreModel.genre}"
             android:textColor="@android:color/black"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -17,7 +17,7 @@ import com.nick.sampleroom.database.type_converter.TypeConverter
 abstract class MyRoomDatabase : RoomDatabase() {
 
     abstract fun bookDao(): BookDao
-    abstract fun bookGenreDao(): BookTypeDao
+    abstract fun bookGenreDao(): BookGenreDao
     abstract fun bookAndBookGenreDao(): BookAndBookGenreDao
 
     companion object {
