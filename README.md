@@ -1,6 +1,6 @@
-This project is a sample room database with dummy data, and show them on recycler view using data binding. <br />
+This is a sample project that uses room database to present dummy data on a recycler view using data binding. <br />
 
-# The Project contain:
+# This Project contains:
 Room Database <br />
 Data Binding <br />
 Coroutines <br />
