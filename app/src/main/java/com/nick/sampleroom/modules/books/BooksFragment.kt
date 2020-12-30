@@ -10,10 +10,10 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
+import com.nick.sampleroom.databinding.FragmentBooksBinding
 import com.nick.sampleroom.modules.books.adapter.BookAdapter
 import com.nick.sampleroom.modules.books.model.BookDataModel
 import com.nick.sampleroom.utils.base_classes.BaseFragment
-import kotlinx.android.synthetic.main.fragment_books.*
 
 /**
  * A simple [Fragment] subclass.
@@ -22,6 +22,7 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
 
     private val booksViewModels = BooksViewModels(SampleRoomApplication.getInstance())
     private var bookAdapter: BookAdapter? = null
+    private var binding: FragmentBooksBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_books, container, false)
@@ -29,6 +30,7 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentBooksBinding.bind(view)
         init()
     }
 
@@ -44,7 +46,7 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
 
     private fun initAdapter() {
         this.bookAdapter = BookAdapter(mutableListOf(), this)
-        booksListAdapter.apply {
+        binding?.booksListAdapter?.apply {
             adapter = this@BooksFragment.bookAdapter
         }
     }

@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.database.type_converter.TypeConverter
-import kotlinx.android.parcel.Parcelize
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Entity

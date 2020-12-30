@@ -5,7 +5,7 @@ import com.nick.sampleroom.R
 import com.nick.sampleroom.database.models.BookModel
 import com.nick.sampleroom.modules.books.model.BookDataModel.BookViewGenre.BOOK_INFO
 import com.nick.sampleroom.modules.books.model.BookDataModel.BookViewGenre.BOOK_GENRE
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class BookDataModel(
