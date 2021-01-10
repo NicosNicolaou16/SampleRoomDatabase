@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nick.sampleroom.R
-import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.databinding.FragmentLauncherBinding
 import com.nick.sampleroom.utils.base_classes.BaseFragment
 
@@ -19,7 +19,7 @@ import com.nick.sampleroom.utils.base_classes.BaseFragment
  */
 class LauncherFragment : BaseFragment() {
 
-    private var launcherViewModel = LauncherViewModel(SampleRoomApplication.getInstance())
+    private lateinit var launcherViewModel: LauncherViewModel
     private var binding: FragmentLauncherBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -29,6 +29,7 @@ class LauncherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLauncherBinding.bind(view)
+        launcherViewModel = ViewModelProvider(this).get(LauncherViewModel::class.java)
 
         launcherViewModel.startMainActivity()
         initObservable()

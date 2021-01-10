@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
@@ -20,7 +21,7 @@ import com.nick.sampleroom.utils.base_classes.BaseFragment
  */
 class BooksFragment : BaseFragment(), BookAdapter.BookListener {
 
-    private val booksViewModels = BooksViewModels(SampleRoomApplication.getInstance())
+    private lateinit var booksViewModels: BooksViewModels
     private var bookAdapter: BookAdapter? = null
     private var binding: FragmentBooksBinding? = null
 
@@ -31,6 +32,8 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentBooksBinding.bind(view)
+        booksViewModels = ViewModelProvider(this).get(BooksViewModels::class.java)
+
         init()
     }
 
@@ -70,7 +73,7 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
     }
 
     override fun onClickBookListener(bookDataModel: BookDataModel) {
-       val action = BooksFragmentDirections.actionBooksFragmentToBookDetailsFragment()
+        val action = BooksFragmentDirections.actionBooksFragmentToBookDetailsFragment()
         action.bookData = bookDataModel
         view?.let { Navigation.findNavController(it).navigate(action) }
     }
