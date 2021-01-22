@@ -13,4 +13,4 @@ MVVM <br />
 Target SDK version: 30 <br />
 Minimum SDK version: 23 <br />
 Kotlin version: 1.4.21 <br />
-Gradle version: 4.1.1 <br />
+Gradle version: 4.1.2 <br />
