@@ -73,8 +73,7 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
     }
 
     override fun onClickBookListener(bookDataModel: BookDataModel) {
-        val action = BooksFragmentDirections.actionBooksFragmentToBookDetailsFragment()
-        action.bookData = bookDataModel
+        val action = BooksFragmentDirections.actionBooksFragmentToBookDetailsFragment(bookDataModel)
         view?.let { Navigation.findNavController(it).navigate(action) }
     }
 }
