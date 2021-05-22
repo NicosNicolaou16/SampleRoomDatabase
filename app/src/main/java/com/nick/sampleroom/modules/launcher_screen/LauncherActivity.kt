@@ -2,9 +2,7 @@ package com.nick.sampleroom.modules.launcher_screen
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.annotation.experimental.UseExperimental
 import androidx.lifecycle.Observer
-import com.nick.sampleroom.R
 import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.databinding.ActivityLauncherBinding
 import com.nick.sampleroom.modules.main_activity.MainActivity
