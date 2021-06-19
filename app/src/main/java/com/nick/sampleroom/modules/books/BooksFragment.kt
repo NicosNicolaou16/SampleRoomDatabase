@@ -55,6 +55,7 @@ class BooksFragment : BaseFragment(), BookAdapter.BookListener {
     }
 
     private fun initObservable() {
+        //With extension(KTX)
         booksViewModels.bookDataList.observe(viewLifecycleOwner, Observer {
             this.bookAdapter?.loadData(it)
         })

@@ -23,7 +23,7 @@ class LauncherViewModel(application: Application) : BaseViewModel(application) {
     }
 
     private suspend fun delayProcess() {
-        withContext(Dispatchers.IO) {
+        withContext(Dispatchers.Default) {
             delay(DELAY)
         }
         startMainActivity.value = true
