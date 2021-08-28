@@ -38,10 +38,7 @@ class LauncherFragment : BaseFragment() {
     private fun initObservable() {
         launcherViewModel.startMainActivity.observe(viewLifecycleOwner, Observer {
             if (it) {
-                launcherViewModel.startMainActivity.observe(viewLifecycleOwner, Observer {
-                    if (it)
-                        view?.let { it1 -> Navigation.findNavController(it1).navigate(LauncherFragmentDirections.actionLauncherFragmentToBooksFragment()) }
-                })
+                view?.let { it1 -> Navigation.findNavController(it1).navigate(LauncherFragmentDirections.actionLauncherFragmentToBooksFragment()) }
             }
         })
     }
