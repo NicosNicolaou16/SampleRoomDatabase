@@ -10,7 +10,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nick.sampleroom.R
-import com.nick.sampleroom.application.SampleRoomApplication
 import com.nick.sampleroom.databinding.FragmentBooksBinding
 import com.nick.sampleroom.modules.books.adapter.BookAdapter
 import com.nick.sampleroom.modules.books.model.BookDataModel

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.nick.sampleroom.R
 import com.nick.sampleroom.database.init_database.MyRoomDatabase
+import com.nick.sampleroom.databinding.RecommendedDefaultLoadingLayoutBinding
 
 abstract class BaseFragment : Fragment() {
 
@@ -36,9 +37,9 @@ abstract class BaseFragment : Fragment() {
     @MainThread
     protected fun startDefaultLoading() {
         stopLoading()
-        val loadingView = LayoutInflater.from(this.requireContext()).inflate(R.layout.recommended_default_loading_layout, null)
-        loadingProgressBar = this.requireContext().let { AlertDialog.Builder(it, R.style.CustomAlertDialog) }.apply {
-            setView(loadingView)
+        val loadingView = RecommendedDefaultLoadingLayoutBinding.inflate(LayoutInflater.from(this.requireContext()))
+        loadingProgressBar = AlertDialog.Builder(this.requireContext(), R.style.CustomAlertDialog).apply {
+            setView(loadingView.root)
             setCancelable(false)
             create()
             loadingShown = show()

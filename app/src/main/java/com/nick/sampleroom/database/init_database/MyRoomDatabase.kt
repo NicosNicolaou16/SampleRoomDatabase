@@ -39,7 +39,7 @@ abstract class MyRoomDatabase : RoomDatabase() {
         ).build()
 
         fun destroyInstance() {
-            instance = null
+            //instance = null
         }
 
         fun deleteAll() {
