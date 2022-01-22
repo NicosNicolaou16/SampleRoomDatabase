@@ -46,15 +46,11 @@ class BookAdapter(private var bookDataModelList: MutableList<BookDataModel>, pri
         }
     }
 
-    private inner class BookInfoViewHolder(var view: BookInfoLayoutRecyclerViewBinding) : RecyclerView.ViewHolder(view.root), BookListener {
+    private inner class BookInfoViewHolder(var view: BookInfoLayoutRecyclerViewBinding) : RecyclerView.ViewHolder(view.root) {
 
         fun bindData(bookDataModel: BookDataModel?) = with(view) {
             books = bookDataModel
-            listener = this@BookInfoViewHolder
-        }
-
-        override fun onClickBookListener(bookDataModel: BookDataModel) {
-            bookListener.onClickBookListener(bookDataModel)
+            listener = bookListener
         }
     }
 }

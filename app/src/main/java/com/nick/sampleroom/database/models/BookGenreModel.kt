@@ -24,7 +24,6 @@ data class BookGenreModel(
                 bookGenreModel?.let { getDatabase().bookGenreDao().insertOrReplaceObject(it) }
                 emit(bookGenreModel)
             }
-
         }
     }
 }
