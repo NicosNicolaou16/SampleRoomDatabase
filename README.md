@@ -12,6 +12,6 @@ MVVM <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
 Target SDK version: 31 <br />
-Minimum SDK version: 23 <br />
-Kotlin version: 1.6.10 <br />
-Gradle version: 7.1.2 <br />
+Minimum SDK version: 24 <br />
+Kotlin version: 1.6.21 <br />
+Gradle version: 7.1.3 <br />
