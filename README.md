@@ -9,6 +9,7 @@ Kotlin ktx <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
+Support kapt and ksp (ksp only setup for Room Database) <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
 Target SDK version: 32 <br />
