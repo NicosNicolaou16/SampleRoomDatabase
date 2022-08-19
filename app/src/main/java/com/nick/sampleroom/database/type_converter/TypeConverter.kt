@@ -10,7 +10,7 @@ class TypeConverter {
 
     @TypeConverter
     fun fromString(value: String?): BookGenreModel {
-        val listType: Type = object : TypeToken<BookGenreModel?>() {}.type
+        val listType: Type = TypeToken.getParameterized(BookGenreModel::class.java, BookGenreModel::class.java).type
         return Gson().fromJson(value, listType)
     }
 

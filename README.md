@@ -12,7 +12,7 @@ MVVM <br />
 Support kapt and ksp (ksp only setup for Room Database) <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
-Target SDK version: 32 <br />
+Target SDK version: 33 <br />
 Minimum SDK version: 25 <br />
 Kotlin version: 1.7.10 <br />
-Gradle version: 7.2.0 <br />
+Gradle version: 7.2.2 <br />
