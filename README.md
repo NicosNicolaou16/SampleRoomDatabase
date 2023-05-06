@@ -14,5 +14,5 @@ minifyEnabled, shrinkResources, R8 are enabled <br />
 
 Target SDK version: 33 <br />
 Minimum SDK version: 25 <br />
-Kotlin version: 1.8.20 <br />
-Gradle version: 8.0.0 <br />
+Kotlin version: 1.8.21 <br />
+Gradle version: 8.0.1 <br />
