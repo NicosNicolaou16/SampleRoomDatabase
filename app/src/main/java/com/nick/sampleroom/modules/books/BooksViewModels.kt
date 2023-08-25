@@ -18,7 +18,7 @@ import kotlin.random.Random
 class BooksViewModels(application: Application) : BaseViewModel(application) {
 
     var bookDataList = createTheDataWithLiveDataKTX().asLiveData()
-    var bookDataListLiveData = MutableLiveData<MutableList<BookDataModel>>()
+    private var bookDataListLiveData = MutableLiveData<MutableList<BookDataModel>>()
 
     companion object {
         private const val DELAY_LOADING = 1500L
