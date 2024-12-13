@@ -39,6 +39,8 @@ compared to KAPT. <br />
 Android that optimizes and reduces the size of APKs by removing unused code and resources, while
 also obfuscating the remaining code to improve security. <br />
 
+# Versioning
+
 Target SDK version: 35 <br />
 Minimum SDK version: 28 <br />
 Kotlin version: 2.1.0 <br />
