@@ -1,7 +1,9 @@
+# Sample Room Database
+
 This is a sample project that uses room database to present dummy data on a recycler view using data
 binding. <br />
 
-# This Project contains:
+# The Project Contain the following technologies
 
 The programming language is the [Kotlin](https://kotlinlang.org/docs/getting-started.html), it is a
 modern, JVM-based programming language that is concise, safe, and interoperable with Java. <br />
