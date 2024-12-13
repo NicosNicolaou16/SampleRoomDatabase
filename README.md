@@ -10,7 +10,7 @@ View Binding <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
-Support kapt and ksp (ksp only setup for Room Database) <br />
+[KSP](https://developer.android.com/build/migrate-to-ksp) ("Kotlin Symbol Processing") is a tool for efficient annotation processing in Kotlin, providing faster code generation and symbol manipulation compared to KAPT. [Repository](https://github.com/google/ksp) <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
 Target SDK version: 35 <br />
