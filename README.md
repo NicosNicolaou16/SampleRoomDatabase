@@ -1,7 +1,7 @@
 # Sample Room Database
 
-This is a sample project that uses room database to present dummy data on a recycler view using data
-binding. <br />
+This is a sample project that uses Room database to display dummy data in a RecyclerView with Data
+Binding. <br />
 
 # The Project Contain the following technologies
 
