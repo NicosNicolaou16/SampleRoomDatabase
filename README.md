@@ -15,7 +15,10 @@ offer more concise and expressive code for working with Android APIs and librari
 the retrieved data from the remote server, querying data from the local database, and supporting
 offline functionality.  <br />
 Data Binding <br />
-View Binding <br />
+[View Binding](https://developer.android.com/topic/libraries/view-binding) in Android is a feature
+that automatically generates a binding class for each layout, providing direct access to the views
+without using `findViewById()`. It ensures safer, type-checked code by reducing the risk of errors
+like `NullPointerException`, making the code simpler and more maintainable. <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
