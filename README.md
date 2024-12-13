@@ -22,7 +22,10 @@ that automatically generates a binding class for each layout, providing direct a
 without using `findViewById()`. It ensures safer, type-checked code by reducing the risk of errors
 like `NullPointerException`, making the code simpler and more maintainable. <br />
 Navigation <br />
-Live Data <br />
+[Live Data](https://developer.android.com/topic/libraries/architecture/livedata) in Android is a
+lifecycle-aware data holder that allows UI components to observe data changes. It automatically
+updates the UI when data changes, ensuring updates occur only when the component is in an active
+lifecycle state, preventing memory leaks and crashes. <br />
 [MVVM](https://developer.android.com/topic/architecture#recommended-app-arch) with repository is an
 architecture where the Repository manages data sources (e.g., network, database), the ViewModel
 processes the data for the UI, and the View displays the UI, ensuring a clear separation of
