@@ -23,7 +23,10 @@ without using `findViewById()`. It ensures safer, type-checked code by reducing 
 like `NullPointerException`, making the code simpler and more maintainable. <br />
 Navigation <br />
 Live Data <br />
-MVVM <br />
+[MVVM](https://developer.android.com/topic/architecture#recommended-app-arch) with repository is an
+architecture where the Repository manages data sources (e.g., network, database), the ViewModel
+processes the data for the UI, and the View displays the UI, ensuring a clear separation of
+concerns. <br />
 [KSP](https://developer.android.com/build/migrate-to-ksp) ("Kotlin Symbol Processing") is a tool for
 efficient annotation processing in Kotlin, providing faster code generation and symbol manipulation
 compared to KAPT. [Repository](https://github.com/google/ksp) <br />
