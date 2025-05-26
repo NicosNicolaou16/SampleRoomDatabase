@@ -43,5 +43,5 @@ also obfuscating the remaining code to improve security. <br />
 
 Target SDK version: 35 <br />
 Minimum SDK version: 28 <br />
-Kotlin version: 2.1.20 <br />
-Gradle version: 8.9.1 <br />
+Kotlin version: 2.1.21 <br />
+Gradle version: 8.10.0 <br />
