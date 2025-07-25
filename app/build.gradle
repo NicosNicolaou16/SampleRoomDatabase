@@ -10,14 +10,14 @@ plugins {
 }
 
 android {
-    compileSdk 35
-    buildToolsVersion '35.0.1'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
     namespace 'com.nick.sampleroom'
 
     defaultConfig {
         applicationId "com.nick.sampleroom"
-        minSdkVersion 28
-        targetSdk 35
+        minSdkVersion 29
+        targetSdk 36
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
