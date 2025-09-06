@@ -58,7 +58,6 @@ android {
     }
 }
 
-val lifeCycleExtensionsVersion by extra("1.1.1")
 val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.9.3")
 val roomVersion by extra("2.7.2")
 val glideVersion by extra("4.16.0")
