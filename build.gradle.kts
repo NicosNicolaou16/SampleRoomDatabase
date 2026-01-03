@@ -14,7 +14,7 @@ buildscript {
 }
 
 plugins {
-    id("com.google.devtools.ksp") version "2.2.10-2.0.2" apply false
+    id("com.google.devtools.ksp") version "2.3.4" apply false
 }
 
 tasks.register("clean", Delete::class) {
