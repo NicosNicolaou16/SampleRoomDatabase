@@ -64,7 +64,7 @@ val glideVersion by extra("4.16.0")
 val navVersion by extra("2.9.6")
 val coroutineVersion by extra("1.10.2")
 val multidexVersion by extra("2.0.1")
-val materialDesignVersion by extra("1.12.0")
+val materialDesignVersion by extra("1.13.0")
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
