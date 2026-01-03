@@ -101,5 +101,5 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
     // Gson
-    implementation("com.google.code.gson:gson:2.13.1")
+    implementation("com.google.code.gson:gson:2.13.2")
 }
