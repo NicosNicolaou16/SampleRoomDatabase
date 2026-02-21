@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     id("com.android.application")
     id("kotlin-parcelize")
-    id("kotlin-kapt")
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -79,7 +78,7 @@ dependencies {
     // KTX - Live data
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     //noinspection LifecycleAnnotationProcessorWithJava8
-    kapt("androidx.lifecycle:lifecycle-compiler:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
+    ksp("androidx.lifecycle:lifecycle-compiler:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     // Room database
     implementation("androidx.room:room-runtime:$roomVersion")
@@ -93,8 +92,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
     // Materials
     implementation("com.google.android.material:material:$materialDesignVersion")
-    // Multidex
-    implementation("androidx.multidex:multidex:$multidexVersion")
     // Glide - load the images
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
