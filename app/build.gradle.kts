@@ -8,14 +8,14 @@ plugins {
 }
 
 android {
-    compileSdk = 36
-    buildToolsVersion = "36.0.0"
+    compileSdk = 37
+    buildToolsVersion = "37.0.0"
     namespace = "com.nick.sampleroom"
 
     defaultConfig {
         applicationId = "com.nick.sampleroom"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -53,24 +53,24 @@ android {
 
 kotlin {
     compilerOptions {
-        languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_3
+        languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_4
         jvmTarget = JvmTarget.fromTarget("21")
         freeCompilerArgs = listOf("-XXLanguage:+PropertyParamAnnotationDefaultTargetMode")
     }
 }
 
-val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.10.0")
+val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.11.0")
 val roomVersion by extra("2.8.4")
-val glideVersion by extra("5.0.5")
-val navVersion by extra("2.9.7")
-val coroutineVersion by extra("1.10.2")
+val glideVersion by extra("5.0.9")
+val navVersion by extra("2.9.8")
+val coroutineVersion by extra("1.11.0")
 val multidexVersion by extra("2.0.1")
-val materialDesignVersion by extra("1.13.0")
+val materialDesignVersion by extra("1.14.0")
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     // Architecture library
-    implementation("androidx.core:core-ktx:1.17.0")
+    implementation("androidx.core:core-ktx:1.19.0")
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
@@ -99,5 +99,5 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
     // Gson
-    implementation("com.google.code.gson:gson:2.13.2")
+    implementation("com.google.code.gson:gson:2.14.0")
 }
