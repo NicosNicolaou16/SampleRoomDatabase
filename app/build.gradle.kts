@@ -59,7 +59,7 @@ kotlin {
     }
 }
 
-val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.10.0")
+val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.11.0")
 val roomVersion by extra("2.8.4")
 val glideVersion by extra("5.0.5")
 val navVersion by extra("2.9.7")
