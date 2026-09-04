@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.milliseconds
 
 class BooksViewModels(application: Application) : BaseViewModel(application) {
 
@@ -42,7 +43,7 @@ class BooksViewModels(application: Application) : BaseViewModel(application) {
         flow {
             loading.value = true
             var bookDataModelList = mutableListOf<BookDataModel>()
-            delay(DELAY_LOADING)
+            delay(DELAY_LOADING.milliseconds)
             withContext(Dispatchers.IO) {
                 val bookModelList = createDummyData()
                 BookModel.insertBooks(bookModelList).collect {
@@ -61,7 +62,7 @@ class BooksViewModels(application: Application) : BaseViewModel(application) {
             loading.value = true
             try {
                 var bookDataModelList = mutableListOf<BookDataModel>()
-                delay(DELAY_LOADING)
+                delay(DELAY_LOADING.milliseconds)
                 withContext(Dispatchers.IO) {
                     val bookModelList = createDummyData()
                     BookModel.insertBooks(bookModelList).collect {
