@@ -55,7 +55,7 @@ This project is built entirely with **[Kotlin](https://kotlinlang.org/docs/getti
 -   **Target SDK:** **37**
 -   **Minimum SDK:** **29**
 -   **Kotlin Version:** **2.4.10**
--   **Gradle Version:** **9.3.0**
+-   **Gradle Version:** **9.4.0**
 
 ## ⭐ Stargazers
 
